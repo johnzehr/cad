@@ -62,10 +62,8 @@ def main():
     verbose=int(request.form["verbose"])
     scaling_error=int(request.form["scaling_error"])
     rot_error=int(request.form["rot_error"])
-    print(len(rstudent_files))
     correct_files = { filename:ezdxf.readfile(CORRECT_FOLDER + "/" + filename) for filename in rcorrect_files if filename.__contains__(".dxf")}
     student_files = { filename:ezdxf.readfile(UPLOAD_FOLDER + "/" + filename) for filename in rstudent_files if filename.__contains__(".dxf")}
-    print(len(student_files))
 
     
     original_stdout = sys.stdout
@@ -74,9 +72,10 @@ def main():
         sys.stdout = f
         for file in student_files:
             for cfile in correct_files:
-                print(file, ": ",(grade(student_files[file], correct_files[cfile], verbose, thresh,extra_ent_penalty, hatch_error_penalty, color_error_penalty, lw_error_penalty, scaling_error, rot_error)))
-        
-    return("Grading succesful. Results have been output in 'GradeCADOutput.txt' file")
+                print(file, ": ",(grade(student_files[file], correct_files[cfile], verbose, thresh,extra_ent_penalty, 
+                hatch_error_penalty, color_error_penalty, lw_error_penalty, scaling_error, rot_error)))
+    f=open("GradeCADOutput.txt","r")
+    return(f.read())
 
 # gets the area of a polygon defined by sets of xy coordinates
 # xy[:,0] are the x values, and xy[:,1] are the y values
@@ -812,4 +811,4 @@ def grade(dxf_student, dxf_correct, verbose, thresh, extra_ent_penalty, hatch_er
 
 bind_ip = "152.3.65.15"
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', debug=True)
+    app.run( debug=True)
