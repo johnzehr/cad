@@ -1,0 +1,6 @@
+birdstudent_bird2_rotated.dxf :  95
+birdstudent_bird_body.dxf :  83
+birdstudent_bird_hatchedmoon.dxf :  91
+birdstudent_bird_original.dxf :  100
+birdstudent_bird_rotated.dxf :  100
+birdstudent_bird_shifted.dxf :  86
