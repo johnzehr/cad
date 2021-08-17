@@ -811,4 +811,4 @@ def grade(dxf_student, dxf_correct, verbose, thresh, extra_ent_penalty, hatch_er
 
 bind_ip = "152.3.65.15"
 if __name__ == '__main__':
-    app.run( debug=True)
+    app.run(host='0.0.0.0', debug=True)
