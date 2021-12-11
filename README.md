@@ -6,7 +6,7 @@ at Duke University under the supervision of Professor Rabih Younes. It has been 
 
 http://vcm-20929.vm.duke.edu/
 
-EDIT 11/18/2021: As of at least today, the virtual machine service is no longer accessible due to the reservation expiring. Please contact john.zehr@duke.edu for any inquiries if you'd like to use this program.
+EDIT 12/10/2021: As of 12/07/2021, our virtual machine reservation has expired. If you'd like to use this service, please contact john.zehr@duke.edu directly.
 
 ## Usage
 This program can be accessed at:
